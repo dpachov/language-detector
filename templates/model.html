@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="content">
+            {% if prediction %}
+                <h4> The language of the sentence is </h4> <br> <br>
+		<div class="fig">
+                     <img src="../static/figs/{{ prediction_flag }}" alt="{{ prediction }} Flag" /> <br>
+    		</div>
+               <h1>
+            {{ prediction }}
+	       </h1>
+            {% else %}
+                <h4> Please type a sentence in any language below </h4>
+            {% endif %}
+    </div>
+
+    <div class="input">
+        <form method="POST">
+            {{ predict_form.sentence.label }} {{ predict_form.sentence }} <br> 
+           <div class="submit">
+            {{ predict_form.submit() }}
+           </div>
+        </form>
+    </div>
+
+
+{% endblock %}
