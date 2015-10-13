@@ -159,7 +159,6 @@ six==1.10.0
 snowballstemmer==1.2.0
 sockjs-tornado==1.0.1
 sphinx==1.2.3
-sphinx-rtd-theme==0.1.7
 sphinx_rtd_theme==0.1.7
 spyder==2.3.7
 spyder-app==2.3.7
