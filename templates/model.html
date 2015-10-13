@@ -4,7 +4,7 @@
 
     <div class="content">
             {% if prediction %}
-                <h4> The language of the sentence is </h4> <br> <br>
+                <h4> The likely language of the sentence is </h4> <br> <br>
 		<div class="fig">
                      <img src="../static/figs/{{ prediction_flag }}" alt="{{ prediction }} Flag" /> <br>
     		</div>
@@ -12,7 +12,7 @@
             {{ prediction }}
 	       </h1>
             {% else %}
-                <h4> Please type a sentence in any language below </h4>
+                <h4> Please type a (long) sentence in any language below </h4>
             {% endif %}
     </div>
 
