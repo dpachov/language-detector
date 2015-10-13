@@ -8,7 +8,7 @@ sequences as 'fingerprints'.
 The script saves the trained model to disk for later use.
 """
 # Original author: Olivier Grisel
-# Adapted by: Dimitar Pachov
+# Adapted by: Dimitar Pachov & Francesco Mosconi
 
 import sys
 from sklearn.datasets import load_files
@@ -23,7 +23,7 @@ from sklearn.pipeline import Pipeline
 dataset = load_files('./paragraphs')
 
 # Split the dataset in training and test set:
-docs_train, docs_test, y_train, y_test = train_test_split(
+x_train, x_test, y_train, y_test = train_test_split(
     dataset.data, dataset.target, test_size=0.5, random_state=0)
 
 # Build a an vectorizer that splits strings into sequence of 1 to n
@@ -39,10 +39,10 @@ pipeline = Pipeline([
     ])
 
 # Fit the pipeline on the training set
-model = pipeline.fit(docs_train, y_train)
+model = pipeline.fit(x_train, y_train)
 
 # Predict the outcome on the testing set
-y_predicted = pipeline.predict(docs_test)
+y_predicted = pipeline.predict(x_test)
 
 
 # Print the classification report
