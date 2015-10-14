@@ -16,7 +16,6 @@ python==2.7.10
 readline==6.2
 scikit-learn==0.16.1
 scipy==0.16.0
-setuptools==18.4
 sqlite==3.8.4.1
 tk==8.5.18
 werkzeug==0.10.4
