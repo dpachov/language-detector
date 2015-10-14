@@ -1,4 +1,3 @@
-git+git://github.com/heroku/heroku-buildpack-python.git
 --allow-unverified --allow-external openssl
 dominate==2.1.16
 flask==0.10.1
